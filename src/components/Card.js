@@ -5,8 +5,6 @@ import Img from 'gatsby-image'
 
 const Post = styled.li`
   position: relative;
-  border: 1px solid ${props => props.theme.colors.secondary};
-  border-radius: 2px;
   margin: 0 0 1em 0;
   width: 100%;
   transition: background 0.2s;
@@ -54,11 +52,6 @@ const Date = styled.h3`
   color: gray;
 `
 
-const ReadingTime = styled.h4`
-  margin: 0 1rem 1.5rem 1rem;
-  color: gray;
-`
-
 const Excerpt = styled.p`
   margin: 0 1rem 1rem 1rem;
   line-height: 1.6;
@@ -73,9 +66,6 @@ const Card = ({ slug, heroImage, title, publishDate, body, ...props }) => {
             <StyledImg fluid={heroImage.fluid} backgroundColor={'#eeeeee'} />
             <Title>{title}</Title>
             <Date>{publishDate}</Date>
-            <ReadingTime>
-              {body.childMarkdownRemark.timeToRead} min read
-            </ReadingTime>
             <Excerpt
               dangerouslySetInnerHTML={{
                 __html: body.childMarkdownRemark.excerpt,
