@@ -7,6 +7,9 @@ const Header = styled.header`
   background: ${props => props.theme.colors.primary};
   width: 100%;
   padding: 1.5em 0;
+  position: fixed;
+  top: 0;
+  z-index: 3;
 `
 const Nav = styled.nav`
   width: 100%;

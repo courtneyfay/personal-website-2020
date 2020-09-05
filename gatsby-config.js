@@ -24,7 +24,7 @@ module.exports = {
     image: '/images/share.jpg',
     menuLinks: [
       {
-        name: 'Home',
+        name: 'Courtney Fay',
         slug: '/',
       },
       {
@@ -33,7 +33,7 @@ module.exports = {
       },
       {
         name: 'Blog',
-        slug: '/blog/',
+        slug: '/#blog/',
       },
       {
         name: 'Resume',

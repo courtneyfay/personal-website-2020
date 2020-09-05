@@ -100,15 +100,18 @@ export const globalStyles = css`
     background: white;
     height: 100%;
   }
-  .siteRoot {
+  .site-root {
     height: 100vh;
     display: flex;
     flex-direction: column;
   }
-  .siteContent {
+  .site-content {
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
+  }
+  .site-main {
+    padding-top: 5%;
   }
   footer {
     width: 100%;

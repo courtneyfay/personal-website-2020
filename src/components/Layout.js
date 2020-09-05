@@ -37,13 +37,15 @@ const Layout = props => {
   useEffect(() => window.addEventListener('keydown', handleFirstTab), [])
 
   return (
-    <Root className="siteRoot">
-      <div className="siteContent">
+    <Root className="site-root">
+      <div className="site-content">
         <Skip href="#main" id="skip-navigation">
           Skip to content
         </Skip>
         <Menu />
-        <div id="main">{props.children}</div>
+        <div id="main" className="site-main">
+          {props.children}
+        </div>
       </div>
       <Footer />
       <Global styles={globalStyles} />
