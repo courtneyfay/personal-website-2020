@@ -111,7 +111,7 @@ export const globalStyles = css`
     flex: 1 0 auto;
   }
   .site-main {
-    padding-top: 5%;
+    padding-top: 4%;
   }
   footer {
     width: 100%;
