@@ -25,7 +25,7 @@ const HomeTemplate = ({ data, pageContext }) => {
     <Layout>
       <SEO
         title="Home"
-        description="This is the landing page for the CourtneyFay.com website"
+        description="This is the landing page for the www.courtneyfay.com website"
       />
       <Container>
         <MainHero />
@@ -45,11 +45,6 @@ const HomeTemplate = ({ data, pageContext }) => {
             <Card key={post.id} {...post} basePath={basePath} />
           ))}
         </CardList>
-        {/* This is the resume section which might need to get broken out into its own component */}
-        <SectionTitle id="resume" small>
-          Resume
-        </SectionTitle>
-        <div style={{ height: '400px', backgroundColor: 'yellow' }}></div>
         {/* This is the contact section which might need to get broken out into its own component */}
         <SectionTitle id="contact" small>
           Contact
