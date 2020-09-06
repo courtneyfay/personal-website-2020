@@ -37,7 +37,7 @@ const Item = styled.li`
     padding: 0 0.25em;
   }
   img {
-    width: 150px;
+    width: 100px;
     display: inline;
   }
 `
@@ -70,7 +70,7 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          See website code
+          Source code
         </a>
         by
         <a
