@@ -29,19 +29,19 @@ module.exports = {
       },
       {
         name: 'Skills',
-        slug: '/#skills/',
+        slug: '/#skills',
       },
       {
         name: 'Blog',
-        slug: '/#blog/',
+        slug: '/#blog',
       },
       {
         name: 'Resume',
-        slug: '/#resume/',
+        slug: '/#resume',
       },
       {
         name: 'Contact',
-        slug: '/contact/',
+        slug: '/#contact',
       },
     ],
     postsPerFirstPage: 31,
@@ -51,6 +51,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-emotion`,
     'gatsby-plugin-theme-ui',
+    {
+      resolve: 'gatsby-plugin-anchor-links',
+      options: {
+        offset: -100,
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-transformer-remark`,
@@ -90,8 +96,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'GCN',
-        short_name: 'GCN',
+        name: 'Courtney Fay',
+        short_name: 'Courtney Fay',
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#ffffff',

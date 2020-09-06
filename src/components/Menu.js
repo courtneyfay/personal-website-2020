@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import styled from '@emotion/styled'
 import { useSiteMetadata } from '../hooks/use-site-metadata'
 
@@ -44,10 +44,6 @@ const Nav = styled.nav`
   }
 `
 
-const activeLinkStyle = {
-  color: 'white',
-}
-
 const Menu = () => {
   const { menuLinks } = useSiteMetadata()
   return (
@@ -56,9 +52,7 @@ const Menu = () => {
         <ul>
           {menuLinks.map(link => (
             <li key={link.name}>
-              <Link to={link.slug} activeStyle={activeLinkStyle}>
-                {link.name}
-              </Link>
+              <AnchorLink to={link.slug} title={link.name} />
             </li>
           ))}
         </ul>

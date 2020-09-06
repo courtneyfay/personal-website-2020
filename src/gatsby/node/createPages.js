@@ -27,10 +27,10 @@ module.exports = async ({ graphql, actions }) => {
     })
   })
 
-  // Create a page containing all "posts" and paginate.
+  // Create home page
   paginate({
     createPage,
-    component: path.resolve(`./src/templates/posts.js`),
+    component: path.resolve(`./src/templates/index.js`),
     items: posts,
     itemsPerFirstPage: config.siteMetadata.postsPerFirstPage || 7,
     itemsPerPage: config.siteMetadata.postsPerPage || 6,
@@ -40,6 +40,20 @@ module.exports = async ({ graphql, actions }) => {
       paginationPath: basePath === '/' ? '' : `/${basePath}`,
     },
   })
+
+  // Create a page containing all "posts" and paginate.
+  // paginate({
+  //   createPage,
+  //   component: path.resolve(`./src/templates/posts.js`),
+  //   items: posts,
+  //   itemsPerFirstPage: config.siteMetadata.postsPerFirstPage || 7,
+  //   itemsPerPage: config.siteMetadata.postsPerPage || 6,
+  //   pathPrefix: basePath,
+  //   context: {
+  //     basePath: basePath === '/' ? '' : basePath,
+  //     paginationPath: basePath === '/' ? '' : `/${basePath}`,
+  //   },
+  // })
 
   // Create "tag" page and paginate
   const tagsQuery = await graphql(query.data.tags)
