@@ -3,9 +3,6 @@ import styled from '@emotion/styled'
 
 const Wrapper = styled.footer`
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-start;
   margin: 0 auto;
   max-width: ${props => props.theme.sizes.maxWidth};
 `
@@ -22,7 +19,6 @@ const List = styled.ul`
 `
 
 const Item = styled.li`
-  display: inline-block;
   padding: 0.25em 0;
   width: 100%;
   @media screen and (min-width: ${props => props.theme.responsive.small}) {
@@ -38,6 +34,11 @@ const Item = styled.li`
     &:visited {
       color: ${props => props.theme.colors.text};
     }
+    padding: 0 0.25em;
+  }
+  img {
+    width: 150px;
+    display: inline;
   }
 `
 
@@ -46,32 +47,38 @@ const Footer = () => (
     <List>
       <Item>
         <a
+          href="https://www.gatsbyjs.com/"
+          rel="nofollow noopener noreferrer"
+          target="_blank"
+        >
+          <img src="https://www.gatsbyjs.com/Gatsby-Logo.svg" alt="Gatsby" />
+        </a>
+        <a
           href="https://www.contentful.com/"
           rel="nofollow noopener noreferrer"
           target="_blank"
         >
           <img
             src="https://images.ctfassets.net/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg"
-            style={{ width: '100px' }}
             alt="Powered by Contentful"
           />
         </a>
       </Item>
       <Item>
         <a
-          href="https://github.com/ryanwiemer/gatsby-starter-gcn"
+          href="https://github.com/courtneyfay/personal-website-2020"
           target="_blank"
           rel="noopener noreferrer"
         >
-          gatsby-starter-gcn
-        </a>{' '}
-        by{' '}
+          See website code
+        </a>
+        by
         <a
-          href="https://github.com/ryanwiemer"
+          href="https://github.com/courtneyfay"
           target="_blank"
           rel="noopener noreferrer"
         >
-          @ryanwiemer
+          @courtneyfay
         </a>
       </Item>
     </List>
