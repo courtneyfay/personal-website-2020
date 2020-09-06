@@ -5,15 +5,10 @@ import Img from 'gatsby-image'
 
 const Post = styled.li`
   position: relative;
-  margin: 0 0 1em 0;
   width: 100%;
   transition: background 0.2s;
   @media screen and (min-width: ${props => props.theme.responsive.small}) {
-    flex: ${props => (props.featured ? '0 0 100%' : '0 0 49%')};
-    margin: 0 0 2vw 0;
-  }
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    flex: ${props => (props.featured ? '0 0 100%' : '0 0 32%')};
+    flex: ${props => (props.featured ? '0 0 100%' : '0 0 50%')};
   }
   &:hover {
     background: ${props => props.theme.colors.tertiary};
@@ -35,9 +30,25 @@ const Post = styled.li`
   }
 `
 
+const ImageWrapper = styled.div`
+  position: relative;
+`
+
 const StyledImg = styled(Img)`
   border-top-left-radius: 1px;
   border-top-right-radius: 1px;
+`
+
+const TitleWrapper = styled.div`
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  max-width: ${props => props.theme.sizes.maxWidthCentered};
+  top: 88.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgb(128, 128, 128, 0.4);
 `
 
 const Title = styled.h2`
@@ -49,12 +60,8 @@ const Title = styled.h2`
 
 const Date = styled.h3`
   margin: 0 1rem 0.5rem 1rem;
-  color: gray;
-`
-
-const Excerpt = styled.p`
-  margin: 0 1rem 1rem 1rem;
-  line-height: 1.6;
+  font-size: 0.9em;
+  color: white;
 `
 
 const Card = ({ slug, heroImage, title, publishDate, body, ...props }) => {
@@ -63,14 +70,13 @@ const Card = ({ slug, heroImage, title, publishDate, body, ...props }) => {
       {heroImage && body && (
         <Post featured={props.featured}>
           <Link to={`${props.basePath}/${slug}/`}>
-            <StyledImg fluid={heroImage.fluid} backgroundColor={'#eeeeee'} />
-            <Title>{title}</Title>
-            <Date>{publishDate}</Date>
-            <Excerpt
-              dangerouslySetInnerHTML={{
-                __html: body.childMarkdownRemark.excerpt,
-              }}
-            />
+            <ImageWrapper>
+              <StyledImg fluid={heroImage.fluid} backgroundColor={'#eeeeee'} />
+              <TitleWrapper>
+                <Title>{title}</Title>
+                <Date>{publishDate}</Date>
+              </TitleWrapper>
+            </ImageWrapper>
           </Link>
         </Post>
       )}
