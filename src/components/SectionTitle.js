@@ -2,12 +2,11 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 const Title = styled.h2`
-  font-size: ${props => (props.small ? '2em' : '3em')};
+  font-size: 2em;
   text-transform: capitalize;
   font-weight: 600;
   text-align: center;
-  margin: 0 0 3rem 0;
-  margin: ${props => (props.small ? '3rem 0 4rem 0' : '0 0 3rem 0')};
+  margin: 4rem 0 3rem 0;
   line-height: 1.2;
   span {
     margin: 0 0 0 0.25em;
@@ -22,11 +21,7 @@ const Title = styled.h2`
 `
 
 const SectionTitle = props => {
-  return (
-    <Title id={props.id} small={props.small}>
-      {props.children}
-    </Title>
-  )
+  return <Title id={props.id}>{props.children}</Title>
 }
 
 export default SectionTitle
