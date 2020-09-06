@@ -25,7 +25,7 @@ module.exports = {
     menuLinks: [
       {
         name: 'Courtney Fay',
-        slug: '/',
+        slug: '/#hero',
       },
       {
         name: 'Skills',
@@ -36,8 +36,8 @@ module.exports = {
         slug: '/#blog',
       },
       {
-        name: 'Contact',
-        slug: '/#contact',
+        name: 'Connect',
+        slug: '/#connect',
       },
     ],
     postsPerFirstPage: 31,

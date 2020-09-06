@@ -6,9 +6,9 @@ import Container from '../components/Container'
 import SectionTitle from '../components/SectionTitle'
 import CardList from '../components/CardList'
 import Card from '../components/Card'
-import ContactForm from '../components/ContactForm'
 import MainHero from '../components/MainHero'
 import SkillList from '../components/SkillList'
+import ConnectLinks from '../components/ConnectLinks'
 
 const HomeTemplate = ({ data, pageContext }) => {
   const posts = data.allContentfulPost.edges
@@ -28,28 +28,26 @@ const HomeTemplate = ({ data, pageContext }) => {
         description="This is the landing page for the www.courtneyfay.com website"
       />
       <Container>
+        <span id="hero" />
         <MainHero />
+
         {/* This is the skills section which might need to get broken out into its own component */}
-        <SectionTitle id="skills" small>
-          Skills
-        </SectionTitle>
+        <SectionTitle id="skills">Skills</SectionTitle>
         <div style={{ margin: '10% 0' }}>
           {skills && <SkillList skills={uniqueSkills} basePath={basePath} />}
         </div>
+
         {/* This is the posts section which might need to get broken out into its own component */}
-        <SectionTitle id="blog" small>
-          Blog
-        </SectionTitle>
+        <SectionTitle id="blog">Blog</SectionTitle>
         <CardList>
           {posts.map(({ node: post }) => (
             <Card key={post.id} {...post} basePath={basePath} />
           ))}
         </CardList>
-        {/* This is the contact section which might need to get broken out into its own component */}
-        <SectionTitle id="contact" small>
-          Contact
-        </SectionTitle>
-        <ContactForm />
+
+        {/* This is the connect section which might need to get broken out into its own component */}
+        <SectionTitle id="connect">Connect</SectionTitle>
+        <ConnectLinks />
       </Container>
     </Layout>
   )
