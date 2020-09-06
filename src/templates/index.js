@@ -7,7 +7,7 @@ import SectionTitle from '../components/SectionTitle'
 import CardList from '../components/CardList'
 import Card from '../components/Card'
 import ContactForm from '../components/ContactForm'
-import HeroImage from '../../static/images/hero.jpg'
+import MainHero from '../components/MainHero'
 import SkillList from '../components/SkillList'
 
 const HomeTemplate = ({ data, pageContext }) => {
@@ -28,8 +28,7 @@ const HomeTemplate = ({ data, pageContext }) => {
         description="This is the landing page for the CourtneyFay.com website"
       />
       <Container>
-        {/* This is the hero section which might need to get broken out into its own component */}
-        <img src={HeroImage} alt="hero image" />
+        <MainHero />
         {/* This is the skills section which might need to get broken out into its own component */}
         <SectionTitle id="skills" small>
           Skills
