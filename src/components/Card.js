@@ -43,12 +43,15 @@ const TitleWrapper = styled.div`
   z-index: 2;
   position: absolute;
   width: 100%;
+  text-overflow: ellipsis;
   max-width: ${props => props.theme.sizes.maxWidthCentered};
   top: 88.5%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   background-color: rgb(128, 128, 128, 0.4);
+  white-space: nowrap;
+  overflow: hidden;
 `
 
 const Title = styled.h2`
