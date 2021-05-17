@@ -3,12 +3,12 @@ import { graphql } from 'gatsby'
 import { startCase, orderBy } from 'lodash'
 import SEO from '../components/SEO'
 import moment from 'moment'
-import Layout from '../components/Layout'
+import Layout from '../components/Layout/Layout'
 import Card from '../components/Card'
 import CardList from '../components/CardList'
 import PageTitle from '../components/PageTitle'
 import Pagination from '../components/Pagination'
-import Container from '../components/Container'
+import Container from '../components/Layout/Container'
 
 const TagTemplate = ({ data, pageContext }) => {
   const posts = orderBy(

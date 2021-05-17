@@ -1,7 +1,7 @@
 import React from 'react'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import styled from '@emotion/styled'
-import { useSiteMetadata } from '../hooks/use-site-metadata'
+import { useSiteMetadata } from '../../hooks/use-site-metadata'
 
 const Header = styled.header`
   background: ${props => props.theme.colors.primary};

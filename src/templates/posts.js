@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import Layout from '../components/Layout/Layout'
 import CardList from '../components/CardList'
 import Card from '../components/Card'
-import Container from '../components/Container'
+import Container from '../components/Layout/Container'
 import SEO from '../components/SEO'
 import { startCase } from 'lodash'
 

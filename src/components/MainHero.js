@@ -54,12 +54,12 @@ const Text = styled.p`
 `
 
 const MainHero = props => (
-  <Wrapper height="70vh">
+  <Wrapper height="70vh" id="hero">
     <BackgroundImage src={HeroImage} alt="Courtney Fay hero" />
     <TextWrapper>
       <Text>Hey! My name is</Text>
       <Name>Courtney Fay</Name>
-      <Text>Frontend Web Developer in Denver</Text>
+      <Text>Virtual Reality engineer in Denver</Text>
     </TextWrapper>
   </Wrapper>
 )
