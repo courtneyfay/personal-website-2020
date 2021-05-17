@@ -17,6 +17,7 @@ const HomeTemplate = ({ data, pageContext }) => {
   const skills = posts.map(post => post.node.tags).flat()
 
   const uniqueSkills = skills.reduce((total, tag) => {
+    if (!tag) return total;
     const justIds = total.map(item => item.id)
     return justIds.includes(tag.id) ? total : total.concat(tag)
   }, [])
