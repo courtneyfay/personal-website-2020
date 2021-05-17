@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import Resume from '../../static/documents/Courtney Fay - Frontend Web Dev - Resume.pdf'
+import Resume from '../../../static/documents/Courtney Fay - Frontend Web Dev - Resume.pdf'
 
 const Wrapper = styled.div`
   height: 20vh;

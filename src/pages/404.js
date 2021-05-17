@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
-import PageTitle from '../components/PageTitle'
+import PageTitle from '../components/Posts/PageTitle'
 import Container from '../components/Layout/Container'
 import Layout from '../components/Layout/Layout'
-import SEO from '../components/SEO'
+import SEO from '../components/Layout/SEO'
 
 const Text = styled.p`
   text-align: center;

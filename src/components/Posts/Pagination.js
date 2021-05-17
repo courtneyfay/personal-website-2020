@@ -1,7 +1,7 @@
 import React from 'react'
 import { navigate, Link } from 'gatsby'
 import styled from '@emotion/styled'
-import SelectIcon from '../icons/SelectIcon'
+import SelectIcon from '../../icons/SelectIcon'
 
 const Wrapper = styled.div`
   width: 100%;
