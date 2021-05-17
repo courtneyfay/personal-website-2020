@@ -36,19 +36,12 @@ const ConnectLinks = () => {
   return (
     <Wrapper>
       <ConnectWrapper>
-        Download &#8964;
-        <Link href={Resume} target="_blank" rel="noopener noreferrer" download>
-          resume
-        </Link>
-      </ConnectWrapper>
-      <ConnectWrapper>
-        Send me a message on LinkedIn
+        Email me
         <Link
-          href="https://www.linkedin.com/in/faycourtney/"
-          target="_blank"
+          href = "mailto: fay.courtney@gmail.com"
           rel="noopener noreferrer"
         >
-          /in/faycourtney
+          fay.courtney@gmail.com
         </Link>
       </ConnectWrapper>
       <ConnectWrapper>
@@ -59,6 +52,25 @@ const ConnectLinks = () => {
           rel="noopener noreferrer"
         >
           @courtneyfay
+        </Link>
+      </ConnectWrapper>
+      <ConnectWrapper>
+        Download &#8964;
+        <Link
+          href={Resume}
+          target="_blank"
+          rel="noopener noreferrer" download>
+          my resume
+        </Link>
+      </ConnectWrapper>
+      <ConnectWrapper>
+        Send me a message on LinkedIn
+        <Link
+          href="https://www.linkedin.com/in/faycourtney/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          /in/faycourtney
         </Link>
       </ConnectWrapper>
     </Wrapper>
