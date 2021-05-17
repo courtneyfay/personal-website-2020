@@ -22,7 +22,7 @@ const HomeTemplate = ({ data, pageContext }) => {
       />
       <Container>
         <MainHero />
-        <SkillsSection />
+        <SkillsSection posts={posts} basePath={basePath} />
 
         {/* This is the posts section which might need to get broken out into its own component */}
         <SectionTitle id="blog">Blog</SectionTitle>
