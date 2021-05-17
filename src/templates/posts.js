@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout/Layout'
-import CardList from '../components/CardList'
-import Card from '../components/Card'
+import CardList from '../components/Blog/CardList'
+import Card from '../components/Blog/Card'
 import Container from '../components/Layout/Container'
-import SEO from '../components/SEO'
+import SEO from '../components/Layout/SEO'
 import { startCase } from 'lodash'
 
 const Posts = ({ data, pageContext }) => {

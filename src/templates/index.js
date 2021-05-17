@@ -7,20 +7,12 @@ import SectionTitle from '../components/Layout/SectionTitle'
 import CardList from '../components/Blog/CardList'
 import Card from '../components/Blog/Card'
 import MainHero from '../components/MainHero'
-import SkillList from '../components/Skills/SkillList'
+import SkillsSection from '../components/Skills/SkillsSection'
 import ConnectLinks from '../components/Connect/ConnectLinks'
 
 const HomeTemplate = ({ data, pageContext }) => {
   const posts = data.allContentfulPost.edges
   const { basePath } = pageContext
-
-  const skills = posts.map(post => post.node.tags).flat()
-
-  const uniqueSkills = skills.reduce((total, tag) => {
-    if (!tag) return total;
-    const justIds = total.map(item => item.id)
-    return justIds.includes(tag.id) ? total : total.concat(tag)
-  }, [])
 
   return (
     <Layout>
@@ -30,12 +22,7 @@ const HomeTemplate = ({ data, pageContext }) => {
       />
       <Container>
         <MainHero />
-
-        {/* This is the skills section which might need to get broken out into its own component */}
-        <SectionTitle id="skills">Skills</SectionTitle>
-        <div style={{ margin: '10% 0' }}>
-          {skills && <SkillList skills={uniqueSkills} basePath={basePath} />}
-        </div>
+        <SkillsSection />
 
         {/* This is the posts section which might need to get broken out into its own component */}
         <SectionTitle id="blog">Blog</SectionTitle>

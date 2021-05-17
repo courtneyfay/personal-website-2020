@@ -1,13 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { startCase, orderBy } from 'lodash'
-import SEO from '../components/SEO'
+import SEO from '../components/Layout/SEO'
 import moment from 'moment'
 import Layout from '../components/Layout/Layout'
-import Card from '../components/Card'
-import CardList from '../components/CardList'
-import PageTitle from '../components/PageTitle'
-import Pagination from '../components/Pagination'
+import Card from '../components/Blog/Card'
+import CardList from '../components/Blog/CardList'
+import PageTitle from '../components/Posts/PageTitle'
+import Pagination from '../components/Posts/Pagination'
 import Container from '../components/Layout/Container'
 
 const TagTemplate = ({ data, pageContext }) => {
